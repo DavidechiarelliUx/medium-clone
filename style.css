@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif; 
+}
+
+h1, h3, h4, h5, h6 {
+    font-family: 'Spectral', serif;
+}
+
+.bg-primary{
+background-color: #ffc017;
+}
+
+.color-text{
+    color:#191919;
+}
+
+.btn-hover-bg{
+    background-color: #1a8917;
+}
+
+.container{
+    margin:0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+/* button da modificare solo il padding che tra nav e hero sono diversi */
+button{
+    background-color: #191919;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+/* header */
+
+header, .bg-primary{
+    background-color: #ffc017;
+    border-bottom:1px solid #191919;
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+}
+
+header div nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 20px;
+    align-items: center;
+}
+
+header div nav ul li{
+    list-style-type: none;
+}
+
+header div nav ul li a{
+    text-decoration: none;
+    color: #191919;
+    font-weight: 300;
+}
+
+header div nav ul button{
+    padding: 10px 20px;
+}
+
+header div nav ul button:hover{
+    background-color: #1a8917;
+    cursor: pointer;
+}
+
+/* main */
+
+main .bg-primary{
+    display: flex;
+    align-items: center;
+}
+
+.hero h1{
+    font-size: 7em;
+    position: relative;
+    bottom: 0.5em;
+}
+
+.hero p{
+    font-size: 1.4em;
+    max-width: 65%;
+}
+
+.hero button{
+    margin-top: 5em;
+    padding: 10px 40px;
+}
+
+/* section article */
+.trending{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    margin-top: 2.5em;
+}
+
+.container-article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1200px;
+    margin-top: 2rem;
+    gap: 20px;
+}
+
+.article-trending, .article-description, .article-name, .article-data{
+    display: flex;
+}
+.article-trending{
+    width: 30%;
+}
+.article-description{
+    flex-direction: column;
+}
+.article-name, .article-data{
+    align-items: center;
+}
+.article-data p{
+    margin-right: 1rem;
+    font-weight: 300;
+}
+
+.article-title{
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+}
+
