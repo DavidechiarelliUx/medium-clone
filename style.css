@@ -30,6 +30,15 @@ background-color: #ffc017;
     padding: 0 20px;
 }
 
+h2{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+h3{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
 /* button da modificare solo il padding che tra nav e hero sono diversi */
 button{
     background-color: #191919;
@@ -70,34 +79,44 @@ header div nav ul li a{
 
 header div nav ul button{
     padding: 10px 20px;
+    cursor: pointer;
 }
 
 header div nav ul button:hover{
     background-color: #1a8917;
-    cursor: pointer;
 }
 
 /* main */
 
 main .bg-primary{
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    overflow: hidden; 
 }
-
+.image-container{
+    max-width: 35%;
+}
 .hero h1{
-    font-size: 7em;
+    font-size: 5rem;
     position: relative;
     bottom: 0.5em;
+    min-width: 370px;
 }
 
 .hero p{
     font-size: 1.4em;
-    max-width: 65%;
+    max-width: 100%;
 }
 
 .hero button{
     margin-top: 5em;
     padding: 10px 40px;
+    cursor: pointer;
+}
+
+.hero button:hover{
+    background-color: #1a8917;
 }
 
 /* section article */
@@ -115,6 +134,8 @@ main .bg-primary{
     width: 1200px;
     margin-top: 2rem;
     gap: 20px;
+    margin-bottom: 2rem;
+    width: 100%;
 }
 
 .article-trending, .article-description, .article-name, .article-data{
@@ -123,6 +144,8 @@ main .bg-primary{
 .article-trending{
     width: 30%;
 }
+
+
 .article-description{
     flex-direction: column;
 }
@@ -134,9 +157,247 @@ main .bg-primary{
     font-weight: 300;
 }
 
-.article-title{
+.article-title h2{
     font-size: 2rem;
     font-weight: bold;
     position: relative;
+    color: rgb(202, 198, 198);
+    position: relative;
+    bottom:1rem;
+    right: 1rem;
 }
 
+.article-name img{
+    border-radius: 5px;
+    width: 25px;
+    margin-right: 1rem;
+}
+.article-name .radius{
+    border-radius: 50%;
+}
+.article-name{
+    position: relative;
+    bottom: 0.5rem;
+    font-size: small;
+}
+
+
+.article-data{
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    font-family: 'Spectral', serif; ;
+}
+.article-data img{
+    position: relative;
+    right: 0.7rem;
+}
+
+/* sezione news  */
+
+.container1{
+    margin:0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+article{
+    display: flex;
+    margin-top: 5rem;
+    width: 60%;
+    flex-direction: column;
+}
+
+.news-item{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+.news-data, .bookmark{
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: 'Spectral', serif; ;
+}
+
+.news-content h2{
+    margin-bottom: 0.5rem;
+}
+
+.news-data{
+    align-items: center;
+    font-weight: 200;
+    font-size: 0.8rem;
+}
+.news-data button{
+    margin-left: 0.3rem;
+    padding: 5px 10px;
+    background-color: rgb(243, 243, 243);
+    color: #616060;
+    font-weight: 100;
+}
+
+.data-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bookmark{
+    position: relative;
+    right: 2rem;
+}
+.news-item img:nth-child(2){
+    max-width: 40%;
+    object-fit: cover;
+}
+/* aside */
+
+aside{
+    display: flex;
+    margin-top: 5rem;
+    width: 30%;
+    flex-direction: column;
+}
+
+aside h4{
+    text-transform: uppercase;
+    font-size: small;
+    font-weight: bold;
+}
+
+aside .button-list {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgb(196, 196, 196);
+    padding-bottom: 20px;
+}
+aside .button-list button{
+    background-color: white;
+    padding: 10px;
+    color: #191919;
+    border-radius: 0;
+    border: 1px solid grey;
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+.border-bottom{
+    border-bottom: 1px solid rgb(196, 196, 196);
+}
+
+.link{
+    margin-top: 1rem;
+}
+aside .link a{
+    display: inline-block;
+    text-decoration: none;
+    color: #191919;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    margin-top: 0.7rem;
+    font-weight: 300;
+}
+
+
+@media  screen and (max-width:768px) {
+
+    .image-container{
+        max-width: 45%;
+    }
+
+    hero{
+        width: 60%;
+    }
+    .hero h1{
+        font-size: 4rem;
+    }
+    header div nav ul{
+        gap:10px;
+    }
+    /* trending  */
+    .container-article{
+        padding: 20px;
+    }
+    .article-trending{
+        width: 40%;
+    }
+    .article-data{
+        justify-content: space-between;
+    }
+    .article-data img{
+        display: none;
+    }
+    /* news section */
+    .container1{
+        flex-direction: column;
+        justify-content:baseline
+    }
+    aside{
+        order: -1;
+        width: 100%;
+    }
+    article{
+        width: 100%;
+    }
+    .news-content p,h2{
+        display: -webkit-box;
+        -webkit-line-clamp: 2; 
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .news-content p{
+        font-size: 0.8rem;
+    }
+    .news-content h2{
+        font-size: 1.1rem;
+    }
+
+}
+
+@media  screen and (max-width:576px){
+
+    .image-container {
+        display: none;
+    }
+    
+    .hero{
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+    header nav ul li{
+        display: none;
+    }
+    header nav ul li:nth-child(4){
+        display: inline-block;
+    }
+    .container{
+        padding: 0 10px;
+    }
+    .article-trending{
+        width: 100%;
+    }
+    .bookmark img{
+        width: 1.2rem;
+    }
+    .news-data{
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* animazione change color menu */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: white;
+}
